@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { BASE_URL } from '../../static/static';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from '../../components/Header';
@@ -13,7 +14,7 @@ const Home = () => {
     // URLSearchParams function
     useEffect(() => {
         const fetchPosts = async () => {
-            const res = await axios.get("/posts" + search);
+            const res = await axios.get(`${BASE_URL}/posts` + search);
             setPosts(res.data);
         };
         fetchPosts();

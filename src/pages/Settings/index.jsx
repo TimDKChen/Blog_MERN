@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { BASE_URL } from '../../static/static';
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Context } from '../../context/Context';
@@ -36,12 +37,12 @@ const Settings = () => {
             // console.log('data:', data.file, data.name);
             // 1. upload file
             try {
-                await axios.post("/upload", data);
+                await axios.post(`${BASE_URL}/upload`, data);
             } catch (err) {};
         };
         // 2. uppload data
         try {
-            const res = await axios.put("/users/" + user._id, updatedUser);
+            const res = await axios.put(`${BASE_URL}/users/` + user._id, updatedUser);
             dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
             alert("Update user's detail successfully!");
             navigate("/", { replace: true });

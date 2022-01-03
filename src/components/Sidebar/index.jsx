@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { BASE_URL } from '../../static/static';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
@@ -8,7 +9,7 @@ const Sidebar = () => {
 
     useEffect(() => {
         const getCats = async () => {
-            const res = await axios("/categories");
+            const res = await axios(`${BASE_URL}/categories`);
             setCats(res.data);
         };
         getCats();

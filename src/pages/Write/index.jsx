@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useContext, useState, useEffect } from 'react';
+import { BASE_URL } from '../../static/static';
 import { Context } from '../../context/Context';
 import './index.css';
 
@@ -13,7 +14,7 @@ const Write = () => {
     useEffect(() => {
         const catArray = async () => {
             let temp = [];
-            const cats = await axios.get("/categories");
+            const cats = await axios.get(`${BASE_URL}/categories`);
             cats.data.forEach(element => {
                 temp.push(element.name);
             });
@@ -57,7 +58,7 @@ const Write = () => {
             }
         };
         try {
-            const res = await axios.post("/posts", newPost, config);
+            const res = await axios.post(`${BASE_URL}/posts`, newPost, config);
             alert("Create a post successfully!");
             window.location.replace("/post/" + res.data._id);
         } catch (err) {};

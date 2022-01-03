@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState, useRef, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Context } from '../../context/Context';
+import { BASE_URL } from '../../static/static';
 import './index.css';
 
 const Register = () => {
@@ -28,7 +29,7 @@ const Register = () => {
             return;
         }
         try {
-            await axios.post("/auth/register", {
+            await axios.post(`${BASE_URL}/auth/register`, {
                 username,
                 email,
                 password

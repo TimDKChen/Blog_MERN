@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
+import { BASE_URL } from '../../static/static';
 import Search from '../Search';
 import GLogout from '../GLogout';
 import Icon from '../../static/blogging.png'
@@ -22,7 +23,7 @@ const Navbar = () => {
                 'Authorization': 'Bearer ' + user.token,
             }
         };
-        await axios.post("/auth/logout", { email: user.email }, config);
+        await axios.post(`${BASE_URL}/auth/logout`, { email: user.email }, config);
         dispatch({ type: "LOGOUT" });
         navigate('/', { replace: true, });
     }

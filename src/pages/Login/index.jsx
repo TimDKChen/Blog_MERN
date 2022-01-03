@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { BASE_URL } from '../../static/static';
 import React, { useState, useRef, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import GLogin from '../../components/GLogin';
@@ -27,7 +28,7 @@ const Login = () => {
             setError(false);
         }
         try {
-            const res = await axios.post("/auth/login", {
+            const res = await axios.post(`${BASE_URL}/auth/login`, {
                 email,
                 password,
             });
