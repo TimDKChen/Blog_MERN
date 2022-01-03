@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
-const helper = require("./helper");
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json"); 
 // routes
@@ -62,7 +61,9 @@ app.use("/api/categories", categoryRoute);
 app.get("/", (_req, res) => res.redirect('/docs'));
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.listen(helper.portNumber, () => {
-    console.log(`Backend is now listening on port ${helper.portNumber}`);
-    console.log(`For API docs, navigate to http://localhost:${helper.portNumber}`);
+// get port number
+const PORT = process.env.PORT || 3030;
+app.listen(PORT, () => {
+    console.log(`Backend is now listening on port ${PORT}`);
+    console.log(`For API docs, navigate to http://localhost:${PORT}`);
 });

@@ -27,6 +27,4 @@ const getEmailFromToken = (token) => {
     return email;
 };
 
-const portNumber = 5000;
-
-module.exports = { getAllEmails, getEmailFromToken, getTokenFromEmail, portNumber };
+module.exports = { getAllEmails, getEmailFromToken, getTokenFromEmail };
