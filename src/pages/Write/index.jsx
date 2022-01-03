@@ -48,7 +48,7 @@ const Write = () => {
             data.append("file", file);
             newPost.photo = filename;
             try {
-                await axios.post("/upload", data);
+                await axios.post(`${BASE_URL}/upload`, data);
             } catch (err) {};
         };
         // axios config
