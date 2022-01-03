@@ -31,8 +31,7 @@ const GLogin = () => {
 
     const onFailure = (res) => {
         dispatch({ type: "LOGIN_FAILURE" });
-        // console.log('[Login Failure] res:', res);
-        alert('LOGIN_FAILURE');
+        console.log('[Login Failure] res:', res);
     };
 
     return(
