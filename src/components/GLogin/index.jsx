@@ -25,14 +25,14 @@ const GLogin = () => {
             navigate('/', { replace: true });
         } catch (err) {
             // console.log('Login Failure:', err);
-            alert(err);
+            alert('Glogin fail');
         };
     };
 
     const onFailure = (res) => {
         dispatch({ type: "LOGIN_FAILURE" });
         // console.log('[Login Failure] res:', res);
-        alert(res);
+        alert('LOGIN_FAILURE');
     };
 
     return(
