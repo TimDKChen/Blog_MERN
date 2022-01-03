@@ -39,13 +39,13 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
+// apply cors must above the static folder line, unless it's invalid
+app.use(cors());
 
 app.post("/api/upload", upload.single("file"), (req, res) => {
     res.status(200).json("File has been uploaded");
 });
 
-// apply cors
-app.use(cors());
 // built-in middleware: only parses JSON and only looks
 // at requests where the Content)type header matches the
 // type option.
