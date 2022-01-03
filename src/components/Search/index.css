@@ -1,0 +1,125 @@
+.searchInputs {
+    width: calc(150% + 54px);
+    height: 35px;
+    display: flex;
+}
+
+.search input {
+    background-color: white;
+    border: 1px solid #0079d3;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: none;
+    font-size: 16px;
+    padding: 6px;
+    width: 150%;
+}
+
+.search input:focus {
+    outline: none;
+    /* border: 2px solid #0079d3; */
+}
+
+#search-button {
+    width: 54px;
+    background: #0079d3;
+	border: 1px solid #0079d3;
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+	padding: 6px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+#search-button i {
+    margin-top: 2px;
+    font-size: 18px;
+    color: white;
+}
+
+#clear-button {
+    width: 30px;
+    background: none;
+	padding: 6px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    float: right;
+    border-top: 1px solid #0079d3;
+    border-bottom: 1px solid #0079d3;
+}
+
+#clear-button i {
+    margin-top: 2px;
+    font-size: 18px;
+    color: #0079d3;
+}
+
+/* data-result */
+.dataResult {
+    width: 150%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 9px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.dataResult::-webkit-scrollbar {
+    display: none;
+}
+
+.dataResultButton {
+    height: 35px;
+    background: white;
+	border: none;
+	padding: 0;
+	font: inherit;
+    text-align: left;
+    text-indent: 6px;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.dataResultButton:hover {
+    background: #ececec;
+}
+
+@media screen and (min-width: 1001px){
+    .search input {
+        width: 150%;
+    }
+    .searchInputs {
+        width: calc(150% + 54px);
+    }
+    .dataResult {
+        width: calc(150% + 54px);
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .search input {
+        width: 100%;
+    }
+    .searchInputs {
+        width: calc(100% + 54px);
+    }
+    .dataResult {
+        width: calc(100% + 54px);
+    }
+}
+
+@media screen and (max-width: 700px){
+    .search input {
+        width: 70%;
+    }
+    .searchInputs {
+        width: calc(70% + 54px);
+    }
+    .dataResult {
+        width: calc(70% + 54px);
+    }
+}
