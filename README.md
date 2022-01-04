@@ -16,7 +16,7 @@ Backend snapshots
 
 
 
-![backend](.\snapshots\api.PNG)
+![backend](./snapshots/api.PNG)
 
 
 
