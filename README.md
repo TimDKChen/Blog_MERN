@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Blog MERN stack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- Tables -->
 
-## Available Scripts
+| Name     | Email                 |
+| :------- | --------------------- |
+| Tim Chen | tim20136202@gmail.com |
 
-In the project directory, you can run:
+Client snapshots
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![client](.\snapshots\client.PNG)
 
-### `yarn test`
+Backend snapshots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![backend](.\snapshots\api.PNG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Functionality
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 1. Auth
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.1 Login
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1.2 Google Login (need to apply new OAUTH 2.0 client credentials, apply new URIs on the original one don't work)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1.3 Sign up
 
-## Learn More
+1.4 Logout
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 2. User (JWT token)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2.1 Get one user's detail
 
-### Code Splitting
+2.2 Update user's detail
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### 3. Post
 
-### Analyzing the Bundle Size
+3.1 Create a post with image, description, title, categories, timestamps
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3.2 View single Post in a detail page
 
-### Making a Progressive Web App
+3.3 Delete a single Post
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3.4 Update a single Post if user is the creator of the post
 
-### Advanced Configuration
+#### 4. Categories
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4.1 Create categories
 
-### Deployment
+4.2 Delete categories if user is the creator if the category
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+4.3 Update categories
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## The things that I have not done
+
+##### 1. Comments section
+
+##### 2. Advertisements sections
+
+##### 3. Search bar (just finish the frontend with static data)
+
+##### 4. UI/UX test (some indicator should be in some section of the webpage)
+
+##### 5. React Test (Jest like that)
+
+##### 6. Pagination/Lazy loading when brunch of posts were created by the users.
+
+
+
+## Issues
+
+##### 1. Frontend deployment does not use production:
+
+​	#1 t.map error: useState with array?
+
+​	#2 probably with csdn link of images in the react components
+
+​	#3 remove source maps?
+
+##### 
+
+## What I have learn
+
+##### 1. use express.js build routes, middleware,
+
+##### 2. use multer.js to store image in backend
+
+##### 3. use mongoDB atlas to store database
+
+##### 4. use cors.js to remove CORS error in console
+
+##### 5. React hook:  useContext, useRef, useReducer, useState, useEffect, useMemo
