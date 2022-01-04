@@ -10,7 +10,7 @@ Client snapshots
 
 
 
-![client](.\snapshots\client.PNG)
+![client](./snapshots/client.PNG)
 
 Backend snapshots
 
