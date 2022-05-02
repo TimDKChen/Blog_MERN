@@ -1,4 +1,4 @@
-const PF = "https://blog-api2021.herokuapp.com/images/";
-export const BASE_URL = "https://blog-api2021.herokuapp.com/api";
+const PF = "http://54.252.226.218:5000/images/";
+export const BASE_URL = "http://54.252.226.218:5000/api";
 
 export default PF;
